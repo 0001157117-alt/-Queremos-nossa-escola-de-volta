@@ -7,65 +7,65 @@
 
 <style>
 
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(Montagem\ de\ Fotos\ Moodboard\ Fashion\ Elegante\ Suave.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* imagem ocupando toda a tela */
+.background{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url(Montagem\ de\ Fotos\ Moodboard\ Fashion\ Elegante\ Suave.jpg) no-repeat center;
+background-size:cover;
+z-index:-1;
 }
 
 /* camada escura */
 .overlay{
-    background-color: rgba(0,0,0,0.6);
-    min-height: 100vh;
-    padding: 20px;
+background:rgba(0,0,0,0.65);
+min-height:100vh;
+padding:20px;
 }
 
 .container{
-    max-width: 900px;
-    margin: auto;
-    color: white;
+max-width:900px;
+margin:auto;
+color:white;
 }
 
 h1{
-    text-align:center;
-    font-size:40px;
+text-align:center;
+margin-bottom:30px;
+font-size:38px;
 }
 
 .card{
-    background-color: rgba(0,0,0,0.5);
-    padding:20px;
-    border-radius:10px;
-    margin-bottom:20px;
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
 }
 
 p{
-    font-size:18px;
-    line-height:1.6;
+font-size:18px;
+line-height:1.6;
 }
 
-/* 📱 ajuste para celular */
-@media (max-width: 768px){
-
-body{
-    background-size: contain;
-    background-position: top;
-    background-attachment: scroll;
-}
+/* celular */
+@media (max-width:768px){
 
 h1{
-    font-size:28px;
+font-size:26px;
 }
 
 p{
-    font-size:16px;
-}
-
-.overlay{
-    padding:15px;
+font-size:16px;
 }
 
 }
@@ -75,8 +75,9 @@ p{
 
 <body>
 
-<div class="overlay">
+<div class="background"></div>
 
+<div class="overlay">
 <div class="container">
 
 <h1>Escola Estadual Alberto Delpino</h1>
